@@ -1,0 +1,54 @@
+//Creacion de Clase
+
+#pragma once
+class Rectangulo
+{	private:
+	float base;
+	float altura;
+	float area;
+
+	public:
+	Rectangulo(void);
+	~Rectangulo(void);
+	float calcular_area(float b,float h);
+};
+
+//Creando Programa Principal
+
+#include "stdafx.h"
+#include "Rectangulo.h"
+#include <iostream>
+#include "conio.h"
+using namespace std;
+
+
+void main ()
+{Rectangulo Rectangulo1;
+ float a,b;
+ cout <<"Ingrese su base: "<<endl;
+ cin>>a;
+ cout<<"Ingrese su altura: "<<endl;
+ cin>>b;
+ cout<<"El area es: "<<Rectangulo1.calcular_area(a,b);
+ getch();
+	
+}
+
+//Constructor y Destructor
+#include "StdAfx.h"
+#include "Rectangulo.h"
+
+
+Rectangulo::Rectangulo(void)
+{
+}
+
+
+Rectangulo::~Rectangulo(void)
+{
+}
+
+float Rectangulo::calcular_area(float b,float h)
+{area=(b*h);
+ return area;
+}
